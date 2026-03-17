@@ -1,0 +1,201 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-17",
+  "_note": "theme_type: gdelt_official = GDELT GKG 공식 테마, custom = 키워드 기반 fallback 처리",
+  "chains": [
+    {
+      "id": "energy_sanctions_to_inflation_politics",
+      "description": "에너지 제재 → 유럽 인플레이션 → 극우 부상",
+      "trigger": {"domain": "trade_sanctions", "theme": "ENERGY_SANCTION", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",  "query": "energy price inflation consumer cost europe"},
+        {"domain": "politics",   "query": "far right populism election energy poverty"}
+      ],
+      "confidence": 0.85, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "drought_to_migration_to_ideology",
+      "description": "사헬/MENA 가뭄 → 이주 → 유럽 극우 이슬람 혐오",
+      "trigger": {"domain": "climate_env", "theme": "DROUGHT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "demography",        "query": "migration displacement climate refugees africa"},
+        {"domain": "social_unrest",     "query": "immigration border crisis europe"},
+        {"domain": "religion_ideology", "query": "islamophobia far right anti-immigration"}
+      ],
+      "confidence": 0.75, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "central_bank_hike_to_emerging_markets",
+      "description": "미국/EU 금리 인상 → 신흥국 달러 부채 위기 → 정치 불안",
+      "trigger": {"domain": "economics", "theme": "CENTRAL_BANK_RATE_HIKE", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",        "query": "emerging market debt crisis currency depreciation"},
+        {"domain": "trade_sanctions",  "query": "dollar dominance currency swap bilateral trade"},
+        {"domain": "politics",         "query": "IMF austerity protest government instability"}
+      ],
+      "confidence": 0.82, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "tech_export_controls_to_semiconductor",
+      "description": "반도체·AI 수출 통제 → 공급망 재편 → 지정학 경쟁",
+      "trigger": {"domain": "trade_sanctions", "theme": "EXPORT_CONTROLS_TECHNOLOGY", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "technology_cyber", "query": "semiconductor chip shortage supply chain decoupling"},
+        {"domain": "economics",        "query": "tech sector investment industrial policy chips act"},
+        {"domain": "politics",         "query": "US China technology competition strategic decoupling"}
+      ],
+      "confidence": 0.88, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "religious_conflict_to_social_unrest",
+      "description": "종파 갈등 → 거리 폭력 → 정부 대응",
+      "trigger": {"domain": "religion_ideology", "theme": "RELIGIOUS_CONFLICT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "social_unrest", "query": "sectarian violence protest communal clashes"},
+        {"domain": "politics",      "query": "government response religious extremism crackdown"}
+      ],
+      "confidence": 0.78, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "military_conflict_to_energy_supply",
+      "description": "분쟁 지역 에너지 인프라 타격 → 공급 충격 → 이주",
+      "trigger": {"domain": "military", "theme": "ARMED_CONFLICT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "energy_resources", "query": "oil gas pipeline disruption energy supply shock"},
+        {"domain": "demography",       "query": "refugee displacement civilian population conflict zone"},
+        {"domain": "economics",        "query": "commodity price shock war premium inflation"}
+      ],
+      "confidence": 0.87, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "pandemic_to_supply_chain_trade",
+      "description": "팬데믹 → 공급망 붕괴 → 의료 민족주의",
+      "trigger": {"domain": "health_pandemic", "theme": "EPIDEMIC_PANDEMIC", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",       "query": "supply chain disruption shortage manufacturing"},
+        {"domain": "trade_sanctions", "query": "medical supply export restriction pharmaceutical nationalism"},
+        {"domain": "politics",        "query": "vaccine diplomacy geopolitical leverage health"}
+      ],
+      "confidence": 0.80, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "election_result_to_market_reaction",
+      "description": "예상 밖 선거 결과 → 시장 불확실성 → 정책 변화",
+      "trigger": {"domain": "politics", "theme": "ELECTION_RESULT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",       "query": "market reaction political uncertainty election risk"},
+        {"domain": "trade_sanctions", "query": "policy change trade agreement renegotiation"}
+      ],
+      "confidence": 0.72, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "currency_crisis_to_instability",
+      "description": "통화 붕괴 → 구매력 침식 → 사회 불안 → 정권 교체",
+      "trigger": {"domain": "economics", "theme": "CURRENCY_CRISIS", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "social_unrest", "query": "inflation protest cost of living strike"},
+        {"domain": "politics",      "query": "government collapse IMF bailout austerity"},
+        {"domain": "demography",    "query": "economic migration brain drain capital flight"}
+      ],
+      "confidence": 0.84, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "cyber_attack_infrastructure",
+      "description": "핵심 인프라 사이버 공격 → 경제 피해 → 군사 확전 위험",
+      "trigger": {"domain": "technology_cyber", "theme": "CYBER_ATTACK_INFRASTRUCTURE", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics", "query": "critical infrastructure attack economic damage"},
+        {"domain": "military",  "query": "cyber warfare attribution state actor escalation"},
+        {"domain": "politics",  "query": "cyber sanctions diplomatic response state-sponsored hacking"}
+      ],
+      "confidence": 0.77, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "food_price_shock_to_unrest",
+      "description": "식량 가격 급등 → 수입 의존국 사회 불안",
+      "trigger": {"domain": "energy_resources", "theme": "FOOD_PRICE_SPIKE", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "social_unrest", "query": "food insecurity bread riots protest hunger"},
+        {"domain": "demography",    "query": "famine displacement food refugee"},
+        {"domain": "politics",      "query": "government subsidy food security policy instability"}
+      ],
+      "confidence": 0.83, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "disinformation_to_election",
+      "description": "조율된 허위정보 작전 → 선거 신뢰 훼손 → 양극화",
+      "trigger": {"domain": "information_ops", "theme": "DISINFORMATION_CAMPAIGN", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "politics",      "query": "election interference foreign influence democratic erosion"},
+        {"domain": "social_unrest", "query": "political polarization radicalization extremism"}
+      ],
+      "confidence": 0.73, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "swift_sanctions_to_dedollarization",
+      "description": "SWIFT 금융 제재 → 탈달러화 가속 → 다극 결제 시스템",
+      "trigger": {"domain": "trade_sanctions", "theme": "FINANCIAL_SANCTION_SWIFT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",       "query": "de-dollarization BRICS yuan renminbi reserve currency"},
+        {"domain": "trade_sanctions", "query": "bilateral trade local currency settlement barter"},
+        {"domain": "politics",        "query": "US dollar hegemony challenge multilateral finance"}
+      ],
+      "confidence": 0.76, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "coup_to_resource_nationalization",
+      "description": "자원 부국 쿠데타 → 채굴 계약 재협상·국유화",
+      "trigger": {"domain": "military", "theme": "COUP_MILITARY", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "energy_resources", "query": "nationalization mining oil contract renegotiation junta"},
+        {"domain": "trade_sanctions",  "query": "sanctions military government coup international response"},
+        {"domain": "demography",       "query": "political refugee displacement post-coup instability"}
+      ],
+      "confidence": 0.79, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "ai_race_to_export_controls",
+      "description": "AI 군사 경쟁 → 신규 반도체·AI 수출 통제 라운드",
+      "trigger": {"domain": "technology_cyber", "theme": "AI_MILITARY_APPLICATION", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "trade_sanctions", "query": "AI export control chip restriction entity list"},
+        {"domain": "military",        "query": "autonomous weapons AI military drone surveillance"},
+        {"domain": "economics",       "query": "AI investment industrial policy national champion"}
+      ],
+      "confidence": 0.80, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "climate_disaster_to_insurance_economics",
+      "description": "기후 재난 → 보험 철수 → 부동산·금융 수축",
+      "trigger": {"domain": "climate_env", "theme": "NATURAL_DISASTER", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "economics",   "query": "climate insurance withdrawal property loss financial sector"},
+        {"domain": "demography",  "query": "climate migration inland retreat coastal flooding"},
+        {"domain": "politics",    "query": "climate adaptation policy disaster relief government response"}
+      ],
+      "confidence": 0.74, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "icc_indictment_to_diplomatic_rupture",
+      "description": "ICC 현직 지도자 기소 → 외교 단절 및 원조 동결",
+      "trigger": {"domain": "lawfare", "theme": "ICC_ARREST_WARRANT", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "politics",        "query": "diplomatic isolation international pariah state AU withdrawal"},
+        {"domain": "economics",       "query": "aid suspension IMF freeze international finance"},
+        {"domain": "trade_sanctions", "query": "targeted sanctions travel ban asset freeze"}
+      ],
+      "confidence": 0.81, "source": "manual", "last_reviewed": "2026-03-17"
+    },
+    {
+      "id": "refugee_influx_to_host_politics",
+      "description": "대규모 난민 유입 → 수용국 극우 정치 강화",
+      "trigger": {"domain": "demography", "theme": "REFUGEE_INFLUX", "theme_type": "custom"},
+      "downstream": [
+        {"domain": "politics",      "query": "immigration policy restrictionism far right electoral shift"},
+        {"domain": "social_unrest", "query": "refugee integration tension housing scarcity xenophobia"},
+        {"domain": "economics",     "query": "refugee economic burden fiscal pressure host country"}
+      ],
+      "confidence": 0.78, "source": "manual", "last_reviewed": "2026-03-17"
+    }
+  ]
+}

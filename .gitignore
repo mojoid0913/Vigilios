@@ -1,0 +1,16 @@
+config/email_config.json
+config/subscribers.json
+config/customers.json
+chroma_db/
+reports/
+outputs/
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.env
+.DS_Store
+*.md
+scripts/

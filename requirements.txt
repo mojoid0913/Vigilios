@@ -1,0 +1,37 @@
+# ── RSS Collection ──
+feedparser>=6.0.0
+trafilatura>=1.6.0
+
+# ── Deduplication ──
+simhash>=2.1.0
+datasketch>=1.6.0
+
+# ── Embeddings / NLP ──
+sentence-transformers>=3.0.0
+torch>=2.2.0
+transformers>=4.40.0
+spacy>=3.7.0
+spacy-entity-linker>=2.0.0
+# 모델 설치: python -m spacy download en_core_web_trf
+
+# ── Vector Database ──
+chromadb>=0.6.0
+
+# ── AI / Gemini ──
+google-generativeai>=0.8.0
+# NOTE: 향후 google-genai>=1.0.0 출시 시 마이그레이션 예정
+
+# ── Report Generation ──
+python-docx>=1.1.0
+
+# ── Ontology / Wikidata ──
+SPARQLWrapper>=2.0.0
+
+# ── HTTP / Utilities ──
+requests>=2.31.0
+python-dateutil>=2.9.0
+tqdm>=4.66.0
+
+# ── Data Handling ──
+pandas>=2.1.0
+numpy>=1.26.0

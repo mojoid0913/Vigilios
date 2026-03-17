@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-17",
+
+  "collection": {
+    "rss_poll_interval_minutes": 15,
+    "max_age_hours": 48,
+    "min_article_length_chars": 200,
+    "max_articles_per_feed": 50,
+    "request_timeout_seconds": 30
+  },
+
+  "dedup": {
+    "simhash_hamming_threshold": 4,
+    "semantic_cosine_threshold": 0.85,
+    "story_cluster_window_hours": 24
+  },
+
+  "credibility": {
+    "mbfc_minimum_factual_score": 0.4,
+    "corroboration_minimum_sources": 2,
+    "domain_age_minimum_days": 180,
+    "score_mapping": {
+      "high": 0.85,
+      "mixed": 0.50,
+      "low": 0.25
+    }
+  },
+
+  "scoring": {
+    "importance_weights": {
+      "credibility": 0.35,
+      "corroboration": 0.25,
+      "actor_significance": 0.25,
+      "novelty": 0.15
+    },
+    "risk_weights": {
+      "political": 0.20,
+      "military": 0.20,
+      "economic": 0.20,
+      "social": 0.15,
+      "information": 0.10,
+      "infrastructure": 0.15
+    },
+    "single_source_penalty": 0.15
+  },
+
+  "selection": {
+    "top_n_per_domain": 3,
+    "max_per_country": 2,
+    "include_fringe_if_kernel_confirmed": true,
+    "min_importance_score": 0.3
+  },
+
+  "vdb": {
+    "domains": [
+      "politics",
+      "military",
+      "lawfare",
+      "economics",
+      "trade_sanctions",
+      "energy_resources",
+      "religion_ideology",
+      "social_unrest",
+      "demography",
+      "technology_cyber",
+      "information_ops",
+      "climate_env",
+      "health_pandemic"
+    ],
+    "hot_layer_days": 90,
+    "cold_layer_days": 730,
+    "cross_domain_top_k": 5,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "persist_directory": "chroma_db",
+    "chunk_size_chars": 256,
+    "chunk_overlap_chars": 32
+  },
+
+  "ontology": {
+    "wikidata_refresh_interval_days": 90,
+    "causal_chain_min_confidence": 0.6,
+    "sparql_endpoint": "https://query.wikidata.org/sparql",
+    "sparql_timeout_seconds": 60
+  },
+
+  "ai": {
+    "model": "gemini-2.0-flash",
+    "grounding_enabled": true,
+    "grounding_max_calls_per_run": 5,
+    "temperature": 0.1,
+    "max_output_tokens": 4096,
+    "sitrep_max_sentences": 3,
+    "analysis_min_chars": 200,
+    "analysis_max_chars": 500
+  }
+}

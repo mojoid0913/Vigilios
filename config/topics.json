@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-17",
+  "_note": "Phase 2 DomainRouter가 이 파일을 읽어 기사를 13개 도메인으로 분류한다. keywords는 1차 키워드 매칭, gdelt_themes는 GDELT GKG 출력과 대조한다.",
+  "domains": {
+    "politics": {
+      "keywords": ["election", "summit", "diplomacy", "government", "parliament", "minister", "president", "senate", "coup", "sanctions", "treaty", "bilateral", "UN", "NATO", "foreign policy"],
+      "gdelt_themes": ["ELECTION", "DIPLOMATIC_MEETING", "GOVERNMENT_POLICY", "MILITARY_COOPERATION"]
+    },
+    "military": {
+      "keywords": ["military", "armed forces", "troops", "missile", "artillery", "airstrike", "drone", "warship", "defense", "NATO", "AUKUS", "ceasefire", "frontline", "battalion"],
+      "gdelt_themes": ["MILITARY_ACTION", "ARMED_CONFLICT", "MILITARY_COOPERATION", "WEAPONS"]
+    },
+    "lawfare": {
+      "keywords": ["ICC", "ICJ", "international court", "indictment", "war crimes", "sanctions regime", "WTO dispute", "arbitration", "legal ruling", "tribunal", "extradition"],
+      "gdelt_themes": ["JUDICIAL", "LEGAL", "CRIME_INTERNATIONAL"]
+    },
+    "economics": {
+      "keywords": ["GDP", "inflation", "interest rate", "central bank", "Fed", "ECB", "stock market", "recession", "fiscal", "monetary policy", "IMF", "World Bank", "bond yield", "currency"],
+      "gdelt_themes": ["ECONOMIC_POLICY", "CENTRAL_BANK", "FINANCIAL_CRISIS", "EMPLOYMENT"]
+    },
+    "trade_sanctions": {
+      "keywords": ["tariff", "sanction", "embargo", "export control", "supply chain", "customs", "trade war", "OFAC", "entity list", "import ban", "trade deficit", "WTO", "free trade agreement"],
+      "gdelt_themes": ["TRADE_DISPUTE", "ECONOMIC_SANCTIONS", "EXPORT_CONTROLS", "FOREIGN_AID"]
+    },
+    "energy_resources": {
+      "keywords": ["oil", "gas", "LNG", "pipeline", "OPEC", "energy", "electricity", "coal", "uranium", "rare earth", "lithium", "food price", "wheat", "grain", "commodity"],
+      "gdelt_themes": ["ENERGY", "OIL_GAS", "FOOD_SECURITY", "COMMODITY_PRICES"]
+    },
+    "religion_ideology": {
+      "keywords": ["religion", "Islam", "Christianity", "Hinduism", "sectarian", "jihadist", "extremism", "ideology", "civilization clash", "blasphemy", "sharia", "evangelism", "cult"],
+      "gdelt_themes": ["RELIGIOUS_CONFLICT", "IDEOLOGY", "TERRORISM_RELIGIOUS"]
+    },
+    "social_unrest": {
+      "keywords": ["protest", "riot", "strike", "demonstration", "uprising", "civil unrest", "crackdown", "activist", "human rights", "racism", "discrimination", "refugee", "migrants"],
+      "gdelt_themes": ["PROTEST", "RIOT", "STRIKE", "HUMAN_RIGHTS_ABUSES"]
+    },
+    "demography": {
+      "keywords": ["population", "birth rate", "aging", "migration", "refugee", "diaspora", "urbanization", "fertility", "demographic", "immigration", "displacement", "brain drain"],
+      "gdelt_themes": ["MIGRATION", "REFUGEE", "POPULATION", "DEMOGRAPHICS"]
+    },
+    "technology_cyber": {
+      "keywords": ["cyber attack", "hacking", "ransomware", "AI", "semiconductor", "chip", "data breach", "espionage", "surveillance", "5G", "quantum", "tech war", "silicon", "malware"],
+      "gdelt_themes": ["CYBER_ATTACK", "TECHNOLOGY", "ESPIONAGE", "ARTIFICIAL_INTELLIGENCE"]
+    },
+    "information_ops": {
+      "keywords": ["disinformation", "propaganda", "fake news", "influence operation", "election interference", "deepfake", "social media manipulation", "bot network", "narrative warfare"],
+      "gdelt_themes": ["DISINFORMATION", "MEDIA_BIAS", "PROPAGANDA", "INFORMATION_OPERATIONS"]
+    },
+    "climate_env": {
+      "keywords": ["climate change", "global warming", "carbon", "emissions", "COP", "Paris Agreement", "drought", "flood", "wildfire", "sea level", "renewable energy", "net zero"],
+      "gdelt_themes": ["CLIMATE_CHANGE", "NATURAL_DISASTER", "ENVIRONMENT", "DROUGHT"]
+    },
+    "health_pandemic": {
+      "keywords": ["pandemic", "epidemic", "outbreak", "virus", "vaccine", "WHO", "public health", "pathogen", "quarantine", "biosecurity", "disease", "mortality", "healthcare"],
+      "gdelt_themes": ["HEALTH_PANDEMIC", "EPIDEMIC", "VACCINE", "PUBLIC_HEALTH"]
+    }
+  }
+}
